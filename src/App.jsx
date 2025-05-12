@@ -1,10 +1,10 @@
-import Navbar from "./Navbar";
+import FormView from "./FormView.jsx";
 import './styles/App.css';
 
 function App() {
 
   return (
-    <Navbar />
+    <FormView />
   )
 }
 
