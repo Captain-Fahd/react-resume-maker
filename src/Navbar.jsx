@@ -10,7 +10,7 @@ function Navbar() {
      <nav>
          <div className="icon">
              <MainIcon text="Resume Maker"
-                       fontSize={40} handleClick={handleclick}
+                       fontSize={25} handleClick={handleclick}
                        className="icon-button"
                        backgroundColor="white"
                        border="none"
