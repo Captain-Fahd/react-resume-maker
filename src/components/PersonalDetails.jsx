@@ -1,3 +1,3 @@
-export default function PersonalDetails() {
+export default function PersonalDetails({form, setFormData}) {
     return;
 }

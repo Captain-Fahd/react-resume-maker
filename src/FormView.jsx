@@ -29,15 +29,42 @@ export default function FormView() {
     };
 
     return (
-        <>
+        <div className="form">
             <Navbar />
             <div className="progress-bar">
                 <div
-                    style={{ width: page === 0 ? '0%': page === 1 ? '33.3%' : page === 2 ? '66.6%' : '100%' }}>
+                    style={{ width: page === 0 ? '33.3%': page === 1 ? '66.6%' : '100%' }}
+                ></div>
+            </div>
+            <div className="form-container">
+                <div className="header">
+                    <h1>{FormTitles[page]}</h1>
+                </div>
+                <div className="body">{PageDisplay()}</div>
+                <div className="footer">
+                    <button
+                        disabled={page == 0}
+                        onClick={() => {
+                            setPage((currPage) => currPage - 1)
+                        }}
+                    >
+                        Prev
+                    </button>
+                    <button
+                        onClick={() => {
+                            if (page === FormTitles.length - 1) {
+                                alert("FORM SUBMITTED");
+                                console.log(formData);
+                            } else {
+                                setPage((currPage) => currPage + 1);
+                            }
+
+                        }}
+                    >
+                        {page === FormTitles.length - 1 ? "Submit" : "Next"}
+                    </button>
                 </div>
             </div>
-
-        </>
+        </div>
     )
-
 }
